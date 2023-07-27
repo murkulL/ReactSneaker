@@ -47,8 +47,8 @@ header ul {
   border-radius: 40px;
   background: #FFF;
   padding: 20px;
-  width: 160px;
-  margin-right: 15px;
+  width: 200px;
+  margin-right: 25px;
   margin-left: 25px;
   position: relative;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
