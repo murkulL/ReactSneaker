@@ -1,0 +1,36 @@
+.card {
+  border: 1px solid #F3F3F3;
+  border-radius: 40px;
+  background: #FFF;
+  padding: 20px;
+  width: 200px;
+  margin-right: 25px;
+  margin-left: 25px;
+  position: relative;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.04);
+  transform: translateY(-5px);
+}
+.card .favorite {
+  position: absolute;
+  cursor: pointer;
+}
+.card h5 {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card .card img {
+  margin: 0 auto;
+  display: block;
+}
+.card span {
+  font-size: 13px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.card b {
+  font-size: 13px;
+}
