@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// eslint-disable-next-line no-unused-vars
+import Card from './components/Card';
+// eslint-disable-next-line no-unused-vars
+import Drawer from './components/Drawer';
+// eslint-disable-next-line no-unused-vars
+import Header from './components/Header';
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper clear">
+      <Drawer />
+      <Header />
+        <div className="content p-40">
+          <div className="d-flex mb-40 align-center justify-between">
+          <h1>All sneackers</h1>
+          <div className="search-block d-flex">
+            <img src="./images/svg/search.svg" alt="search img"/>
+            <input type="text" placeholder="Search..."/>
+          </div>
+          </div>
+          <div className="d-flex">
+            <Card />
+          </div>
+        </div>
     </div>
   );
 }
