@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'; // для преобразования в HTML
-import './style/index.css';
+import './dist/style.css';
 // eslint-disable-next-line no-unused-vars
 import App from './App';
 import 'macro-css';

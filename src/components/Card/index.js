@@ -9,7 +9,7 @@ function Card ({ title, imageUrl, price, clickOnPlus, addFavorite }) {
     setIsAdded(!isAdded);
   };
   React.useEffect(() => {
-    console.log('change');
+   
   }, [isAdded]);
   return (
   <>
@@ -19,7 +19,7 @@ function Card ({ title, imageUrl, price, clickOnPlus, addFavorite }) {
       </div>
 
       <img width={133} height={112} src={ imageUrl } alt="product img" />
-      <h5>{ title}</h5>
+      <h5>{title}</h5>
       <div className="d-flex align-center justify-between">
         <div className="d-flex flex-column">
           <span>Price:</span>

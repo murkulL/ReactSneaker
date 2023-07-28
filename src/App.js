@@ -25,17 +25,15 @@ function App () {
     });
   }, []);
 
-  const onAddToCart = () => {
-    setcartItems();
+  const onAddToCart = (obj) => {
+    setcartItems( prev => [...prev, obj])
   };
-  onAddToCart();
+
 
   return (
     <div className="wrapper clear">
-      {cartOpened ? <Drawer items={cartItems} closeDrawer={() => setCartOpened(false)} /> : null}
-      <Header
-        openDrawer={() => setCartOpened(true)}
-      />
+      {cartOpened && <Drawer items={cartItems} closeDrawer={() => setCartOpened(false)} />}
+      <Header openDrawer={() => setCartOpened(true)} />
         <div className="content p-40">
           <div className="d-flex mb-40 align-center justify-between">
           <h1>All sneackers</h1>
@@ -45,13 +43,13 @@ function App () {
           </div>
           </div>
           <div className="d-flex flex-wrap">
-            {items.map((obj) => (
+            {items.map((item) => (
               <Card
-              title={obj.name}
-              price={obj.price}
-              imageUrl={obj.images}
+              title={item.name}
+              price={item.price}
+              imageUrl={item.images}
               addFavorite={() => console.log('добавили в закладки')}
-              clickOnPlus={(obj) => console.log(obj)}
+              clickOnPlus={(obj) => onAddToCart(obj)}
               />
             ))}
           </div>
