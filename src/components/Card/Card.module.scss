@@ -1,5 +1,8 @@
 
 .card {
+	.plus{
+		cursor: pointer;
+	}
 	border: 1px solid #F3F3F3;
 	border-radius: 40px;
 	background: #FFF;
@@ -7,6 +10,7 @@
 	width: 200px;
 	margin-right: 25px;
 	margin-left: 25px;
+	margin-bottom: 30px;
 	position: relative;
 	transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 

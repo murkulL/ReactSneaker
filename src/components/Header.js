@@ -1,4 +1,4 @@
-function Header () {
+function Header (props) {
   return (
 <><header className="header d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
@@ -10,7 +10,7 @@ function Header () {
         </div>
         <ul className="headerRight d-flex clear">
           <li>
-            <img src="/images/svg/basket.svg" width={20} height={20} alt="svg header"/>
+            <img onClick={props.openDrawer} src="/images/svg/basket.svg" width={20} height={20} alt="svg header"/>
             <span>1205 грн</span>
           </li>
           <li>

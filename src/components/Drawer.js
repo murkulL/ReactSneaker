@@ -1,19 +1,23 @@
-function Drawer () {
+function Drawer ({ onClose, items = [] }) {
   return (
     <>
-     <div className="overlay" style={{ display: 'none' }}>
+    <div className="overlay">
         <div className="drawer">
-          <h2 className="Shopping mb-20">Shopping cart <img className="removeBtn cu-p" src="./images/svg/remove.svg" alt="remove btn" /></h2>
+          <h2 className="Shopping mb-20">Shopping cart<img onClick={onClose} className="removeBtn cu-p" src="./images/svg/remove.svg" alt="remove btn" /></h2>
 
           <div className="items">
-          <div className="cartItem d-flex align-center justify-between mb-20">
-            <div className="cartItemImg mr-10" style={{ backgroundImage: 'url(/images/img-1.jpg)' }}></div>
-              <div className="mr-20">
-              <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
-              <b>1 299 $</b>
-              </div>
-                <img className="removeBtn" src="./images/svg/remove.svg" alt="remove btn" />
-              </div>
+            {
+              items.map((obj) => (
+                <div className="cartItem d-flex align-center justify-between mb-20">
+                <div className="cartItemImg mr-10" style={{ backgroundImage: `url(${obj.imagesUrl})` }}></div>
+                  <div className="mr-20">
+                  <p className="mb-5">{`${obj.title}`}</p>
+                  <b>{`${obj.price}`} $</b>
+                  </div>
+                    <img className="removeBtn" src="./images/svg/remove.svg" alt="remove btn" />
+                  </div>
+              ))
+            }
           </div>
 
           <div className="cartTotalBlock">
@@ -21,7 +25,7 @@ function Drawer () {
             <li>
               <span>Total:</span>
               <div></div>
-              <b> 1 2000 $</b>
+              <b> 1 200 $</b>
             </li>
             <li>
               <span>Tax 5%:</span>
