@@ -1,10 +1,12 @@
 function Drawer ({closeDrawer, items = []}) {
-  console.log(closeDrawer)
+ 
   return (
     <>
     <div className="overlay">
         <div className="drawer">
-          <h2 className="Shopping mb-20">Shopping cart<img onClick={closeDrawer} className="removeBtn cu-p" src="./images/svg/remove.svg" alt="remove btn" /></h2>
+          <h2 className="Shopping mb-20">Shopping cart
+          <img onClick={closeDrawer} className="removeBtn cu-p" src="./images/svg/remove.svg" alt="remove btn" />
+          </h2>
           <div className="items">
             {
               items.map((obj) => (
@@ -14,7 +16,7 @@ function Drawer ({closeDrawer, items = []}) {
                   <p className="mb-5">{`${obj.title}`}</p>
                   <b>{`${obj.price}`} $</b>
                   </div>
-                    <img className="removeBtn" src="./images/svg/remove.svg" alt="remove btn" />
+                    <img onClick={closeDrawer} className="removeBtn" src="./images/svg/remove.svg" alt="remove btn" />
                   </div>
               ))
             }
@@ -33,7 +35,7 @@ function Drawer ({closeDrawer, items = []}) {
               <b>25 $</b>
             </li>
           </ul>
-          <button className="greenButton">Сheckout<img src="/images/svg/arrow.svg" alt="arrow of checkout"></img></button>
+          <button className="greenButton">Checkout<img src="/images/svg/arrow.svg" alt="arrow of checkout"></img></button>
           </div>
         </div>
       </div>

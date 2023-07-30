@@ -67,7 +67,19 @@ header {
 	cursor: pointer;
 }
 
+
 .search-block {
+	position: relative;
+	.removeSearchBtm{
+		opacity: .6;
+		transition: all .2s ease-in-out;
+		position: absolute;
+		right: 10px;
+		top: 6px;
+		&:hover{
+			opacity: 1;
+		}
+	}
 	border: 1px solid #f2f2f2;
 	padding: 0 15px;
 	border-radius: 10px;

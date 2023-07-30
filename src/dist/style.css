@@ -47,9 +47,20 @@ header ul {
 }
 
 .search-block {
+  position: relative;
   border: 1px solid #f2f2f2;
   padding: 0 15px;
   border-radius: 10px;
+}
+.search-block .removeSearchBtm {
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+.search-block .removeSearchBtm:hover {
+  opacity: 1;
 }
 .search-block input {
   border: none !important;
